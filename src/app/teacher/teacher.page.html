@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>teacher</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form>
+    <ion-item>
+      <ion-label position="floating">Name</ion-label>
+      <ion-input [(ngModel)]="teacher.name" name="name" required></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Subject</ion-label>
+      <ion-input [(ngModel)]="teacher.subject" name="subject" required></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Experience</ion-label>
+      <ion-input [(ngModel)]="teacher.experience" type="number" name="experience" required></ion-input>
+    </ion-item>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button expand="full" (click)="addTeacher()">
+      {{ teacher.id ? 'Update Teacher' : '' }}
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  </form>
+
+  <ion-list>
+    <ion-item *ngFor="let teacher of teachers">
+      <ion-label>
+        <h2>{{ teacher.name }}</h2>
+        <p>{{ teacher.subject }} ({{ teacher.experience }} years)</p>
+      </ion-label>
+      <ion-button color="primary" (click)="editTeacher(teacher)">Edit</ion-button>
+      <ion-button color="danger" (click)="deleteTeacher(teacher.id)">Delete</ion-button>
+      
+    </ion-item>
+  </ion-list>
+  <ion-button expand="full" color="secondary" [routerLink]="['/home']">
+    Go to Home
+  </ion-button>
+</ion-content>
+

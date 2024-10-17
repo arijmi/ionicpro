@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>update-student</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="updateStudent()">Save</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form>
+    <ion-item>
+      <ion-label position="floating">Name</ion-label>
+      <ion-input [(ngModel)]="tempStudent.name" name="name" required></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Class</ion-label>
+      <ion-input [(ngModel)]="tempStudent.class" name="class" required></ion-input>
+    </ion-item>
+  </form>
+</ion-content>

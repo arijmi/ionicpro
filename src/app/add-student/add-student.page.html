@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>add-student</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form (ngSubmit)="addStudent()">
+    <ion-item>
+      <ion-label position="floating">Name</ion-label>
+      <ion-input [(ngModel)]="student.name" name="name" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Class</ion-label>
+      <ion-input [(ngModel)]="student.class" name="class" required></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" type="submit">Add Student</ion-button>
+  </form>
+</ion-content>

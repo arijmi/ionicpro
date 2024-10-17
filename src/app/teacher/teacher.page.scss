@@ -1,0 +1,60 @@
+// teacher.page.scss
+
+// General styles for the teacher page
+ion-header {
+  background-color: #f8f8f8; // Light background for header
+}
+
+ion-toolbar {
+  background-color: #e0e0e0; // Grey toolbar background
+  color: #333; // Dark text color
+}
+
+// Style for the form items
+ion-item {
+  --background: #ffffff; // White background for input items
+  --border-color: #ccc; // Light grey border color
+}
+
+// Style for the buttons
+ion-button.grey-button {
+  background-color: #808080; // Grey background
+  color: white; // White text color
+  border-radius: 20px; // Rounded corners
+  padding: 10px; // Padding for better appearance
+  margin-top: 10px; // Space above the button
+
+  &:hover {
+    background-color: darken(#808080, 10%); // Darken on hover
+  }
+}
+
+// Optional: Styling for the list items
+ion-list {
+  margin-top: 20px; // Space above the list
+}
+
+ion-item {
+  --background: #f0f0f0; // Light background for list items
+  margin-bottom: 10px; // Space between list items
+
+  ion-label {
+    h2 {
+      color: #333; // Dark color for the teacher name
+    }
+    p {
+      color: #666; // Grey color for the subject and experience text
+    }
+  }
+  ion-button.grey-button {
+    background-color: #808080; // Grey background
+    color: white; // White text color
+    border-radius: 20px; // Rounded corners
+    padding: 10px; // Padding for better appearance
+    margin-top: 10px; // Space above the button
+  
+    &:hover {
+      background-color: darken(#808080, 10%); // Darken on hover
+    }
+  }
+}

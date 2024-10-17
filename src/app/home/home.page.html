@@ -1,0 +1,14 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="home-content">
+    <h1>Welcome to the School Management System</h1>
+    <p>This is the home page where you can navigate to different sections of the app.</p>
+    <ion-button expand="full" [routerLink]="['/teacher']">Manage Teachers</ion-button>
+    <ion-button expand="full" [routerLink]="['/students']">Manage Students</ion-button>
+  </div>
+</ion-content>
