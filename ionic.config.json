@@ -1,0 +1,7 @@
+{
+  "name": "school-management",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
